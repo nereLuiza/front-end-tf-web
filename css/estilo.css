@@ -1,0 +1,12 @@
+header {
+    background-color: gray;
+}
+
+.menu {
+    list-style-type: none;
+    
+}
+.imagem img{
+    width: 100%;
+    height: 300px;
+}
