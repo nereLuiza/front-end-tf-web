@@ -1,7 +1,7 @@
 # front-end-tf-web
 Front-End do trabalho final da disciplina de WEB
 
-## Teste Vocacional Para Cursos Técnicos do IFNMG Salinas
+# Teste Vocacional Para Cursos Técnicos do IFNMG Salinas
 
 ## Descrição
 Muitos jovens almejam cursar o Ensino Médio no IFNMG Salinas. 
