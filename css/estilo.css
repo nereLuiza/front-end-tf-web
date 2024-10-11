@@ -6,7 +6,6 @@
 * {
     font-family: carving;
 }
-    
 
 header {
     background-color: rgb(144, 189, 144);
@@ -70,7 +69,7 @@ h1 {
     width: 400px;
     text-align: justify;
     height: 700px;
-    border: 5px solid rgba(144, 189, 144, 0.253);
+    border: 5px solid rgba(144, 189, 144, 0.5);
     padding: 15px;
     border-radius: 17px;
 }

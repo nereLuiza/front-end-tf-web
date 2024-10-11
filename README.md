@@ -19,3 +19,7 @@ Teste vocacional para INDICAR um dos cursos para o usuário
 baseado em suas respostas;
 
 ## Deploy
+
+
+## Autores
+Cibely Nascimento Soares

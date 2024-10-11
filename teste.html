@@ -15,5 +15,45 @@
                 </ul>
             </div>
         </header>
+
+        <form action="/main.py" method="get">
+
+            <input id="nome" name="nome" type="text"/>
+            <label for="nome">Qual é o seu nome?</label>
+
+            <input id="idade" name="idade" type="number">
+            <label for="idade">Qual é a sua idade?</label>
+
+            <fieldset>
+                <legend>Qual das áreas do conhecimento mais te interessa?</legend>
+                <input id='area-1'
+                       name='area'
+                       type='radio'
+                       value='humanas' />
+                <label for='area-1'>Humanas</label>
+
+                <input id='area-2'
+                       name='area'
+                       type='radio'
+                       value='exatas' />
+                <label for='area-2'>Exatas</label>
+
+                <input id='area-3'
+                       name='area'
+                       type='radio'
+                       value='linguagens' />
+                <label for='area-3'>Linguagens</label>
+
+                <input id='area-4'
+                       name='area'
+                       type='radio'
+                       value='exatas' />
+                <label for='area-4'>Biológicas</label>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+            </fieldset>
+        </form>
     </body>
 </html>
