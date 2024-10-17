@@ -16,8 +16,8 @@
             </div>
         </header>
 
-        <form action="/main.py" method="get">
-
+        <form action="." method="get">
+        
             <label for="nome">Qual é o seu nome?</label>
             <input id="nome" name="nome" type="text"/>
 
@@ -26,6 +26,7 @@
 
             <fieldset>
                 <legend>Qual das áreas do conhecimento mais te interessa?</legend>
+
                 <input id='area-1'
                        name='area'
                        type='radio'
@@ -47,12 +48,56 @@
                 <input id='area-4'
                        name='area'
                        type='radio'
-                       value='exatas' />
+                       value='biologicas' />
                 <label for='area-4'>Biológicas</label>
             </fieldset>
 
             <fieldset>
-                <legend></legend>
+                <legend>Você é muito atarefado?</legend>
+
+                <input id='tarefa-s'
+                       name='tarefa'
+                       type='radio'
+                       value='sim' />
+                <label for='tarefa-s'>Sim</label>
+
+                <input id='tarefa-n'
+                       name='tarefa'
+                       type='radio'
+                       value='nao' />
+                <label for='tarefa-n'>Não</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Você gosta de desafios lógicos?</legend>
+
+                <input id='desafios-s'
+                       name='desafios'
+                       type='radio'
+                       value='sim' />
+                <label for='desafios-s'>Sim</label>
+
+                <input id='desafios-n'
+                       name='desafios'
+                       type='radio'
+                       value='nao' />
+                <label for='desafios-n'>Não</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Você é sedentário?</legend>
+
+                <input id='sed-s'
+                       name='sed'
+                       type='radio'
+                       value='sim' />
+                <label for='sed-s'>Sim</label>
+
+                <input id='sed-n'
+                       name='sed'
+                       type='radio'
+                       value='nao' />
+                <label for='sed-n'>Não</label>
             </fieldset>
         </form>
     </body>
