@@ -16,89 +16,289 @@
             </div>
         </header>
 
-        <form action="." method="get">
-        
-            <label for="nome">Qual é o seu nome?</label>
-            <input id="nome" name="nome" type="text"/>
+        <form>
+            <div class="lado">
+                <label for="nome">Qual é o seu nome?</label>
+                <input id="nome" name="nome" type="text"/>
 
-            <label for="idade">Qual é a sua idade?</label>
-            <input id="idade" name="idade" type="number">
+                </br>
+                </br>
 
-            <fieldset>
-                <legend>Qual das áreas do conhecimento mais te interessa?</legend>
+                <label for="idade">Qual é a sua idade?</label>
+                <input id="idade" name="idade" type="number">
 
-                <input id='area-1'
-                       name='area'
-                       type='radio'
-                       value='humanas' />
-                <label for='area-1'>Humanas</label>
+                </br>
 
-                <input id='area-2'
-                       name='area'
-                       type='radio'
-                       value='exatas' />
-                <label for='area-2'>Exatas</label>
+                <fieldset>
+                    <legend>Qual das áreas do conhecimento mais te interessa?</legend>
 
-                <input id='area-3'
-                       name='area'
-                       type='radio'
-                       value='linguagens' />
-                <label for='area-3'>Linguagens</label>
+                    <input id='area-1'
+                        name='area'
+                        type='radio'
+                        value='humanas' />
+                    <label for='area-1'>Humanas</label>
+                    <br>
+                    <input id='area-2'
+                        name='area'
+                        type='radio'
+                        value='exatas' />
+                    <label for='area-2'>Exatas</label>
+                    <br>
+                    <input id='area-3'
+                        name='area'
+                        type='radio'
+                        value='linguagens' />
+                    <label for='area-3'>Linguagens</label>
+                    <br>
+                    <input id='area-4'
+                        name='area'
+                        type='radio'
+                        value='biologicas' />
+                    <label for='area-4'>Biológicas</label>
+                </fieldset>
 
-                <input id='area-4'
-                       name='area'
-                       type='radio'
-                       value='biologicas' />
-                <label for='area-4'>Biológicas</label>
-            </fieldset>
+                <fieldset>
+                    <legend>Você é muito atarefado?</legend>
 
-            <fieldset>
-                <legend>Você é muito atarefado?</legend>
+                    <input id='tarefa-s'
+                        name='tarefa'
+                        type='radio'
+                        value='sim' />
+                    <label for='tarefa-s'>Sim</label>
+                    <br>
+                    <input id='tarefa-n'
+                        name='tarefa'
+                        type='radio'
+                        value='nao' />
+                    <label for='tarefa-n'>Não</label>
+                </fieldset>
 
-                <input id='tarefa-s'
-                       name='tarefa'
-                       type='radio'
-                       value='sim' />
-                <label for='tarefa-s'>Sim</label>
+                <fieldset>
+                    <legend>Você gosta de desafios lógicos?</legend>
 
-                <input id='tarefa-n'
-                       name='tarefa'
-                       type='radio'
-                       value='nao' />
-                <label for='tarefa-n'>Não</label>
-            </fieldset>
+                    <input id='desafios-s'
+                        name='desafios'
+                        type='radio'
+                        value='sim' />
+                    <label for='desafios-s'>Sim</label>
+                    <br>
+                    <input id='desafios-n'
+                        name='desafios'
+                        type='radio'
+                        value='nao' />
+                    <label for='desafios-n'>Não</label>
+                </fieldset>
 
-            <fieldset>
-                <legend>Você gosta de desafios lógicos?</legend>
+                <fieldset>
+                    <legend>Você se considera uma pessoa sedentária?</legend>
 
-                <input id='desafios-s'
-                       name='desafios'
-                       type='radio'
-                       value='sim' />
-                <label for='desafios-s'>Sim</label>
+                    <input id='sed-s'
+                        name='sed'
+                        type='radio'
+                        value='sim' />
+                    <label for='sed-s'>Sim</label>
+                    <br>
+                    <input id='sed-n'
+                        name='sed'
+                        type='radio'
+                        value='nao' />
+                    <label for='sed-n'>Não</label>
+                </fieldset>
 
-                <input id='desafios-n'
-                       name='desafios'
-                       type='radio'
-                       value='nao' />
-                <label for='desafios-n'>Não</label>
-            </fieldset>
+                <fieldset>
+                    <legend>Você gosta de cozinhar?</legend>
 
-            <fieldset>
-                <legend>Você é sedentário?</legend>
+                    <input id='cozinhar-s'
+                        name='cozinhar'
+                        type='radio'
+                        value='sim'  />
+                    <label for='cozinhar-s'>Sim</label>
+                    <br>
+                    <input id='cozinhar-n'
+                        name='cozinhar'
+                        type='radio'
+                        value='nao'  />
+                    <label for='cozinhar-n'>Não</label>
+                </fieldset>
 
-                <input id='sed-s'
-                       name='sed'
-                       type='radio'
-                       value='sim' />
-                <label for='sed-s'>Sim</label>
+                <fieldset>
+                    <legend>Você gosta de animais?</legend>
 
-                <input id='sed-n'
-                       name='sed'
-                       type='radio'
-                       value='nao' />
-                <label for='sed-n'>Não</label>
-            </fieldset>
+                    <input id='animais-s'
+                        name='animais'
+                        type='radio'
+                        value='sim'  />
+                    <label for='animais-s'>Sim</label>
+                    <br>
+                    <input id='animais-n'
+                        name='animais'
+                        type='radio'
+                        value='nao'  />
+                    <label for='animais-n'>Não</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Você gosta de descobrir/entender o funcionamento interno das coisas?</legend>
+
+                    <input id='interno-s'
+                        name='interno'
+                        type='radio'
+                        value='sim'  />
+                    <label for='interno-s'>Sim</label>
+                    <br>
+                    <input id='interno-n'
+                        name='interno'
+                        type='radio'
+                        value='nao'  />
+                    <label for='interno-n'>Não</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Você tem experiência com plantações?</legend>
+
+                    <input id='planta-s'
+                        name='planta'
+                        type='radio'
+                        value='sim'  />
+                    <label for='planta-s'>Sim</label>
+                    <br>
+                    <input id='planta-n'
+                        name='planta'
+                        type='radio'
+                        value='nao'  />
+                    <label for='planta-n'>Não</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Você é bom com instrumentos de corte?</legend>
+
+                    <input id='corte-s'
+                        name='corte'
+                        type='radio'
+                        value='sim'  />
+                    <label for='corte-s'>Sim</label>
+                    <br>
+                    <input id='corte-n'
+                        name='corte'
+                        type='radio'
+                        value='nao'  />
+                    <label for='corte-n'>Não</label>
+                </fieldset>
+            </div>
+
+            <div class="lado">
+                <fieldset>
+                    <legend>O que mais te motiva em uma atividade profissional?</legend>
+
+                    <input id='atvd-a'
+                        name='atvd'
+                        type='radio'
+                        value='tech'  />
+                    <label for='atvd-a'>
+                        Criar soluções e resolver problemas com tecnologia.
+                    </label>
+                    <br>
+                    <input id='atvd-b'
+                        name='atvd'
+                        type='radio'
+                        value='ind'  />
+                    <label for='atvd-b'>
+                        Trabalhar com processos e soluções industriais.
+                    </label>
+                    <br>
+                    <input id='atvd-c'
+                        name='atvd'
+                        type='radio'
+                        value='anim'  />
+                    <label for='atvd-c'>
+                        Cuidar de plantas e animais, garantindo que cresçam de maneira saudável e produtiva.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Você prefere...</legend>
+
+                    <input id='pref-a'
+                        name='pref'
+                        type='radio'
+                        value='lab'  />
+                    <label for='pref-a'>
+                        Trabalhar em laboratórios ou áreas de pesquisa tecnológica.
+                    </label>
+                    <br>
+                    <input id='pref-b'
+                        name='pref'
+                        type='radio'
+                        value='alim'  />
+                    <label for='pref-b'>
+                        Participar de atividades mais práticas, como a produção de alimentos em larga escala.
+                    </label>
+                    <br>
+                    <input id='pref-c'
+                        name='pref'
+                        type='radio'
+                        value='campo'  />
+                    <label for='pref-c'>
+                        Trabalhar com processos relacionados à agricultura, cuidando diretamente da produção no campo.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como você se sente em relação ao uso de ferramentas manuais ou maquinários?</legend>
+
+                    <input id='uso-a'
+                        name='uso'
+                        type='radio'
+                        value='pc'  />
+                    <label for='uso-a'>
+                        Prefiro atividades que envolvem o uso de computadores e tecnologias mais sofisticadas.
+                    </label>
+                    <br>
+                    <input id='uso-b'
+                        name='uso'
+                        type='radio'
+                        value='escala'  />
+                    <label for='uso-b'>
+                        Gosto de trabalhar com ferramentas e maquinários para fazer coisas em grande escala.
+                    </label>
+                    <br>
+                    <input id='uso-c'
+                        name='uso'
+                        type='radio'
+                        value='manual'  />
+                    <label for='uso-c'>
+                        Não tenho problemas em usar ferramentas manuais ou equipamentos para cuidar de plantas e animais.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como você se sente trabalhando em equipe?</legend>
+
+                    <input id='eqp-a'
+                        name='eqp'
+                        type='radio'
+                        value='tecnica'  />
+                    <label for='eqp-a'>
+                        Prefiro ser o responsável pela parte técnica, ajudando a criar soluções.
+                    </label>
+                    <br>
+                    <input id='eqp-b'
+                        name='eqp'
+                        type='radio'
+                        value='orgn'  />
+                    <label for='eqp-b'>
+                        Gosto de trabalhar com processos mais organizados, mas também com pessoas em campo.
+                    </label>
+                    <br>
+                    <input id='eqp-c'
+                        name='eqp'
+                        type='radio'
+                        value='natur'  />
+                    <label for='eqp-c'>
+                        Gosto de um trabalho mais prático e em contato com a natureza.
+                    </label>
+                </fieldset>
+            </div>
         </form>
     </body>
 </html>

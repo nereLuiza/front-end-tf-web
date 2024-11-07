@@ -13,6 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     display: flex;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -82,5 +83,23 @@ h1 {
 
 form {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lado {
+    width: 40%;
+    display: column;
+}
+
+#index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login {
+    border: 5px solid rgba(144, 189, 144, 0.5);
+    padding: 30px;
+    height: 200px;
+    width: 200px;
 }
