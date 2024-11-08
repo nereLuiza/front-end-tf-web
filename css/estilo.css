@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 7px;
 }
 
 h1 {
@@ -54,8 +54,8 @@ h1 {
 
 #desc {
     text-align: justify;
-    width: 30%;
-    margin-left: 35%;
+    width: 50%;
+    margin-left: 25%;
 }
 
 #cursos {
@@ -102,4 +102,33 @@ form {
     padding: 30px;
     height: 200px;
     width: 200px;
+}
+
+#login > form {
+    display: flex;
+    flex-direction: column;
+}
+
+#tudo {
+    width: 100%;
+    display: flex;
+}
+
+.menuLado {
+    flex: 1;
+    background-color: rgb(144, 189, 144);
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuLado h1 {
+    font-size: 30px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.resto {
+    flex: 3;
+    height: 750px;
 }
