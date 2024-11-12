@@ -23,3 +23,7 @@ baseado em suas respostas;
 
 ## Autores
 Cibely Nascimento Soares
+Luíza Castro Nere
+Nicolas Rodrigues Bahia
+Pedro Henrique Alves Costa
+Tharcisio Alves Selis Silva
