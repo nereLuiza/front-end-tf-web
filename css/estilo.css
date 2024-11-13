@@ -117,7 +117,7 @@ form {
 .menuLado {
     flex: 1;
     background-color: rgb(144, 189, 144);
-    height: 750px;
+    height: 800px;
     display: flex;
     flex-direction: column;
 }
@@ -133,10 +133,37 @@ form {
     text-decoration: none;
     list-style-type: none;
     margin-left: -10px;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .resto {
     flex: 3;
     height: 750px;
+    justify-content: center;
+}
+
+.resto h1, .resto p {
+    text-align: right;
+}
+
+#este {
+    background-color: rgba(80, 100, 80, 0.5);
+    margin-left: -40px;
+}
+
+#este li > a {
+    padding-left: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.resto form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: 3px solid rgba(144, 189, 144, 0.5);
+    border-radius: 7px;
+    height: 600px;
+    margin-left: 160px;
+    padding: 30px;
 }
