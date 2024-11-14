@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/estilo.css">
-        <title>Inserir Novo Curso</title>
+        <title>Novo Curso</title>
     </head>
     <body>
         <div id="tudo">
@@ -20,7 +20,30 @@
                 </ul>
             </div>
             <div class="resto">
+                <h1>Inserir Novo Curso</h1>
+                <form>
+                    <label for="nome">
+                        Insira o nome do curso:
+                    </label>
+                    <input id="nome" name="nome" type="text" />
 
+                    <label for="desc">
+                        Insira a descrição do curso:
+                    </label>
+                    <textarea id="desc" name="desc"></textarea>
+
+                    <label for="ppc">
+                        Insira o PPC do curso:
+                    </label>
+                    <input id="ppc" name="ppc" type="file" />
+
+                    <label for="mcc">
+                        Insira a Matriz Curricular do Curso
+                    </label>
+                    <input id="mcc" name="mcc" type="file" />
+
+                    <input type="submit" value="Salvar" />
+                </form>
             </div>
         </div>
     </body>
