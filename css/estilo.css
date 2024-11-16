@@ -167,3 +167,9 @@ form {
     margin-left: 160px;
     padding: 30px;
 }
+
+form > textarea {
+    resize: none;
+    height: 200px;
+    
+}
