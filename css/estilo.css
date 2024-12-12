@@ -141,7 +141,12 @@ form {
     justify-content: center;
 }
 
-.resto h1, .resto p {
+.resto h1, .resto p, .resto h3 {
+    text-align: right;
+}
+
+.resto h2 {
+    color: rgb(144, 189, 144);
     text-align: right;
 }
 
