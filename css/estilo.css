@@ -113,28 +113,6 @@ form {
     display: flex;
 }
 
-.menuLado {
-    flex: 1;
-    background-color: rgb(144, 189, 144);
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-}
-
-.menuLado h1 {
-    font-size: 30px;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.menuLado ul > li > a , .menuLado ul li {
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
-    margin-left: -10px;
-    padding: 10px;
-}
-
 .resto {
     flex: 3;
     height: 750px;
@@ -148,17 +126,6 @@ form {
 .resto h2 {
     color: rgb(144, 189, 144);
     text-align: right;
-}
-
-#este {
-    background-color: rgba(80, 100, 80, 0.5);
-    margin-left: -40px;
-}
-
-#este li > a {
-    padding-left: 40px;
-    text-decoration: none;
-    color: white;
 }
 
 .resto form {
@@ -184,4 +151,58 @@ form > textarea {
     flex-wrap: wrap;
     width: 1240px;
     padding: 50px;
+}
+
+.menuLado {
+    flex: 1;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(144, 189, 144);
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.menuLado h1 {
+    font-size: 30px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 150px;
+}
+
+.menuLado ul {
+    position: relative;
+    list-style-type: none;
+}
+
+.menuLado ul > li > a {
+    color: black;
+    text-decoration: none;
+    margin-left: -10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.menuLado ul li a:hover {
+    color: white;
+}
+
+.menuLado ul ul {
+    position: absolute;
+    left: 200px;
+    width: 150px;
+    top: 6px;
+    background: rgba(144, 189, 144, 0.5);
+    display: none;
+}
+
+.menuLado ul .dropdown {
+    position: relative;
+}
+
+.menuLado ul .dropdown:hover ul{
+    display: initial;
 }
