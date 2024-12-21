@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Início - Admin</title>
+        <title>Admin - Alterar Curso</title>
         <link rel="stylesheet" href="/css/estilo.css">
     </head>
     <body>
@@ -38,19 +38,51 @@
                 </ul>
             </div>
             <div class="resto">
-                <h1>Página Inicial</h1>
-                <h2>Dados Gerais</h2>
-                <h3>Acessos</h3>
-                <p>
-                    X pessoas acessaram o website. </br>
-                    X pessoas realizaram o teste
-                </p>
-                <h3>Resultados</h3>
-                <p>
-                    Agropecuária = n </br>
-                    Informática = m </br>
-                    Agroindústria = p </br>
-                </p>
+                <h1>Alterar Curso</h1>
+                <form>
+                    <fieldset>
+                        <legend>Curso a ser alterado:</legend>
+
+                        <input id='alt-agropec'
+                            name='alt'
+                            type='radio'
+                            value='agropec' />
+                        <label for='alt-agropec'>
+                            Agropecuária
+                        </label>
+
+                        <input id='alt-agroin'
+                            name='alt'
+                            type='radio'
+                            value='agroin' />
+                        <label for='alt-agroin'>
+                            Agroindústria
+                        </label>
+
+                        <input id='alt-info'
+                            name='alt'
+                            type='radio'
+                            value='info' />
+                        <label for='alt-info'>
+                            Informática
+                        </label>
+                    </fieldset>
+
+                    <label for='alt-desc'>
+                        Nova descrição:
+                    </label>
+                    <textarea id='alt-desc' name='alt-desc' rows='5' cols='50'></textarea>
+
+                    <label for='alt-ppc'>Novo PPC:</label>
+                    <input id='alt-ppc'
+                        name='alt-ppc'
+                        type='file' />
+                    
+                    <label for='alt-mcc'>Nova Matriz Curricular:</label>
+                    <input id='alt-mcc'
+                        name='alt-mcc'
+                        type='file' />
+                </form>
             </div>
         </div>
     </body>
