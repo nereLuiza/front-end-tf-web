@@ -38,7 +38,32 @@
                 </ul>
             </div>
             <div class="resto">
-                
+                <h1>Inserir Novo Curso</h1>
+                <form>
+                    <label for='nomeCurso'>
+                        Nome do Curso:
+                    </label>
+                    <input id='nomeCurso'
+                           name='nomeCurso'
+                           type='text' />
+                    
+                    <label for='descCurso'>
+                        Descrição do curso:
+                    </label>
+                    <textarea id='descCurso' name='descCurso' rows='5' cols='50'></textarea>
+
+                    <label for='ppcCurso'>PPC:</label>
+                    <input id='ppcCurso'
+                        name='ppc'
+                        type='file' />
+                    
+                    <label for='mccCurso'>Matriz Curricular:</label>
+                    <input id='mccCurso'
+                        name='mcc'
+                        type='file' />
+
+                    <input type='submit' value="Salvar" />
+                </form>
             </div>
         </div>
     </body>
