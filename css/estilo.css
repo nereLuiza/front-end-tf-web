@@ -228,3 +228,12 @@ td > a:hover {
     color: rgb(144, 189, 144);
     transition: 0.3s;
 }
+
+#verI {
+    margin-left: 300px;
+    display: flex;
+    width: 900px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

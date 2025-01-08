@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Início - Admin</title>
+        <title>Admin - Alterar Imagens</title>
         <link rel="stylesheet" href="/css/estilo.css">
     </head>
     <body>
@@ -38,7 +38,54 @@
                 </ul>
             </div>
             <div class="resto">
-                
+                <form>
+                    <fieldset>
+                        <legend>Qual imagem será alterada?</legend>
+                        <input id='ifnmg'
+                               name="ifnmg"
+                               value='ifnmg.jpg'
+                               type='radio' />
+
+                        <label for='ifnmg'>
+                            <img src="/images/ifnmg.jpg" height="100"/>                        
+                        </label>
+                    </br>
+                        <input id='ifnmg2'
+                               name='ifnmg2'
+                               type='radio'
+                               value='ifnmg2.jpg' />
+
+                        <label for='ifnmg2'>
+                            <img src="/images/ifnmg2.jpg" height="100"/>
+                        </label>
+                    </br>
+                        <input id='infraE'
+                               name='infraE'
+                               value='infraE.jpg'
+                               type='radio' />
+                    
+                        <label for='infraE'>
+                            <img src="/images/infraE.jpg" height="100"/>
+                        </label>
+                    </br>
+                        <input id='ifnmg3'
+                               name='ifnmg3'
+                               value='ifnmg3.jpg'
+                               type='radio' />
+                        <label for='ifnmg3'>
+                            <img src="/images/ifnmg3.jpg" height="100"/>
+                        </label>
+                    </fieldset>
+
+                    <label for='altimg'>
+                        Nova Imagem:
+                    </label>
+                    <input id='altimg'
+                           name='altimg'
+                           type='file' />
+                           
+                    <input type='submit' value="Salvar" />
+                </form>
             </div>
         </div>
     </body>
