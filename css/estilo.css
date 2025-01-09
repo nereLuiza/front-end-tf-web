@@ -212,6 +212,7 @@ table {
     border: 5px solid rgba(144, 189, 144, 0.5);
     letter-spacing: 1px;
     margin-left: 440px;
+    max-width: 600px;
 }
 
 th, td {
