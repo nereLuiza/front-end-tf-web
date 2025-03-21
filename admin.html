@@ -8,7 +8,7 @@
     </head>
     <body id="index">
         <div id="login"> 
-            <form action="/admin/indexA.html">
+            <form>
                 
                 <label for='email'>Email:</label>
                 <input id='email' name='email' type='email'/>
@@ -16,8 +16,10 @@
                 <label for='senha'>Senha:</label>
                 <input id='senha' name='senha' type='password'/>
                 </br>
-                <input type='submit' value="Entrar" />
+                <button type='submit' id='bt-entrar'>Entrar</button>
             </form>
+            <span id="msg" class=""></span>
         </div>
+        <script src="/js/admin.js"></script>
     </body>
 </html>

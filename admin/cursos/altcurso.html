@@ -40,33 +40,11 @@
             <div class="resto">
                 <h1>Alterar Curso</h1>
                 <form>
-                    <fieldset>
-                        <legend>Curso a ser alterado:</legend>
-
-                        <input id='alt-agropec'
-                            name='alt'
-                            type='radio'
-                            value='agropec' />
-                        <label for='alt-agropec'>
-                            Agropecuária
-                        </label>
-
-                        <input id='alt-agroin'
-                            name='alt'
-                            type='radio'
-                            value='agroin' />
-                        <label for='alt-agroin'>
-                            Agroindústria
-                        </label>
-
-                        <input id='alt-info'
-                            name='alt'
-                            type='radio'
-                            value='info' />
-                        <label for='alt-info'>
-                            Informática
-                        </label>
-                    </fieldset>
+                    <label for='code_curso'>Código do curso:</label>
+                    <input id='code_curso'
+                           name='codeCurso'
+                           type='text'
+                    />
 
                     <label for='alt-desc'>
                         Nova descrição:
@@ -82,9 +60,10 @@
                     <input id='alt-mcc'
                         name='alt-mcc'
                         type='file' />
-                    <input type='submit' value="Salvar Alterações" />
+                    <input id='submit' type='submit' value="Salvar Alterações" />
                 </form>
             </div>
         </div>
+        <script src="/js-admin/cursos/altcurso.js"></script>
     </body>
 </html>

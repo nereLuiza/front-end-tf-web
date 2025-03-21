@@ -40,30 +40,15 @@
             <div class="resto">
                 <h1>Deletar Curso</h1>
                 <form>
-                    <fieldset>
-                        <legend>Curso a ser deletado</legend>
-
-                        <input id='del-agropec'
-                            name='del'
-                            type='radio'
-                            value='agropec' />
-                        <label for='del-agropec'>Agropecuária</label>
-
-                        <input id='del-agroin'
-                            name='del'
-                            type='radio'
-                            value='agroin' />
-                        <label for='del-agroin'>Agroindústria</label>
-
-                        <input id='del-info'
-                            name='del'
-                            type='radio'
-                            value='info' />
-                        <label for='del-info'>Informática</label>
-                    </fieldset>
-                    <input type='submit' value="Deletar" />
+                    <label for='code_curso'>Código do curso:</label>
+                    <input id='code_curso'
+                           name='codeCurso'
+                           type='text'
+                    />
+                    <input id='bt-excluir' type='submit' value="Deletar" />
                 </form>
             </div>
         </div>
+        <script src="/js-admin/cursos/delcurso.js"></script>
     </body>
 </html>

@@ -15,8 +15,13 @@
             </div>
         </header>
 
-        <h1>
-            Com base nas suas respostas, te indicamos o curso:
-        </h1>
+        <h1 id="resultado"></h1>
+
+        <script>
+            import {resultado} from "/teste.html";
+            const result = resultado();
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML("Com base nas suas respostas, te indicamos o curso: ${resultado}");
+        </script>
     </body>
 </html>

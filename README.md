@@ -8,7 +8,7 @@ Muitos jovens almejam cursar o Ensino Médio no IFNMG Salinas.
 No entanto, a maioria deles não sabe qual curso integrado 
 escolher, muitas vezes pela falta de informação. A proposta
 desse projeto é auxiliá-los nessa escolha por meio de um 
-teste vocacional.
+"teste vocacional".
 
 ## Principais Funcionalidades
 Informações sobre os cursos disponíveis para o Ensino Médio;
