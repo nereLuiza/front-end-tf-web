@@ -18,10 +18,18 @@
         <h1 id="resultado"></h1>
 
         <script>
-            import {resultado} from "/teste.html";
-            const result = resultado();
-            const resultado = document.getElementById('resultado');
-            resultado.innerHTML("Com base nas suas respostas, te indicamos o curso: ${resultado}");
+            document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const resultadoCurso = urlParams.get("curso");
+
+            if (resultadoCurso) {
+                document.getElementById("resultado").innerText = 
+                    `Com base nas suas respostas, te indicamos o curso: ${resultadoCurso}`;
+            } else {
+                document.getElementById("resultado").innerText = 
+                    "Erro ao carregar o resultado.";
+            }
+            });
         </script>
     </body>
 </html>

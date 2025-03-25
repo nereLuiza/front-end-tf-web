@@ -1,26 +1,35 @@
-const teste = document.forms;
 const cursos = ["Técnico em Informática", "Técnico em Agropecuária", "Técnico em Agroindústria"];
-const tamanho = teste.length;
-let i, result;
-let miin = 0;
-let miai = 0;
-let miap = 0;
 
-for(i=0; i >= tamanho; i++) {
-    if(teste.element[i].value == 'miin')
-        miin += 1;
-    else if(teste.element[i].value == 'miai')
-        miai += 1;
-    else if(teste.element[i].value == 'miap')
-        miap += 1;
-}
+document.getElementById("teste").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-export async function resultado() {
-    if(miin > miai && miin > miap) 
+    const cursoSugerido = resultado(); // Obtém o curso recomendado
+    const resultadoEncoded = encodeURIComponent(cursoSugerido); // Codifica o resultado para a URL
+
+    window.location.href = `/resultado.html?curso=${resultadoEncoded}`; // Redireciona com o parâmetro na URL
+});
+
+async function resultado() {
+    let miin = 0, miai = 0, miap = 0;
+
+    const inputs = document.querySelectorAll("input[type='radio']:checked");
+
+    inputs.forEach(input => {
+        if (input.value === 'miin') miin++;
+        else if (input.value === 'miai') miai++;
+        else if (input.value === 'miap') miap++;
+    });
+
+    let result;
+    if (miin > miai && miin > miap) {
         result = cursos[0];
-    else if(miai > miin && miai > miap)
+    } else if (miai > miin && miai > miap) {
         result = cursos[2];
-    else if (miap > miai && miap > miin)
+    } else if (miap > miai && miap > miin) {
         result = cursos[1];
+    } else {
+        result = "Empate! Tente responder novamente.";
+    }
+
     return result;
 }

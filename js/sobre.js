@@ -5,23 +5,21 @@ async function getCursos() {
   try {
     const response = await fetch(`${urlBase}/cursos`);
     if (!response.ok) {
-      throw new Error("Erro ao buscar imagens: " + response.status);
+      throw new Error("Erro ao buscar cursos: " + response.status);
     }
 
     const data = await response.json();
-    container.innerHTML = "";
+    cursos.innerHTML = "";
 
-    data.forEach(item => {
+    data.forEach(curso => {
       const div = document.createElement("div");
       div.className = "curso";
 
       div.innerHTML = `
-        <h1>${item.nomeCurso}</h1>
-        <p>
-            ${item.desc_curso}
-        </p>
-        <a href="${item.ppc}">Projeto Pedagógico do Curso</a>
-        <a href="${item.mcc}">Matriz Curricular do Curso</a>
+        <h1>${curso.nomeCurso}</h1>
+        <p>${curso.desc_curso}</p>
+        <a href="${curso.ppc}">Projeto Pedagógico do Curso</a>
+        <a href="${curso.mcc}">Matriz Curricular do Curso</a>
       `;
 
       cursos.appendChild(div);
