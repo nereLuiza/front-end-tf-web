@@ -17,13 +17,11 @@ async function autenticar(e) {
     const url = "https://back-end-tf-web-mu.vercel.app/login";
   
     try {
-        const response = await fetch(url, {
-            method: 'POST',
+        const response = await fetch("https://back-end-tf-web-mu.vercel.app/login", {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                "Content-Type": "application/json"
             },
-            credentials: 'include',
             body: JSON.stringify(dados)
         });
 

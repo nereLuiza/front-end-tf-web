@@ -16,9 +16,10 @@ async function getCursos() {
       div.className = "curso";
 
       div.innerHTML = `
-        <h1>${curso.nomeCurso}</h1>
+        <h1>${curso.nome_curso}</h1>
         <p>${curso.desc_curso}</p>
         <a href="${curso.ppc}">Projeto Pedagógico do Curso</a>
+        </br>
         <a href="${curso.mcc}">Matriz Curricular do Curso</a>
       `;
 

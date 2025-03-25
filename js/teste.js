@@ -1,17 +1,16 @@
-const cursos = ["Técnico em Informática", "Técnico em Agropecuária", "Técnico em Agroindústria"];
-
 document.getElementById("teste").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const cursoSugerido = resultado(); // Obtém o curso recomendado
-    const resultadoEncoded = encodeURIComponent(cursoSugerido); // Codifica o resultado para a URL
+    localStorage.setItem("cursoEscolhido", cursoSugerido); // Salva no localStorage
 
-    window.location.href = `/resultado.html?curso=${resultadoEncoded}`; // Redireciona com o parâmetro na URL
+    window.location.href = "/resultado.html"; // Redireciona para a página do resultado
 });
 
-async function resultado() {
+function resultado() {
     let miin = 0, miai = 0, miap = 0;
-
+    const cursos = ["Técnico em Informática", "Técnico em Agropecuária", "Técnico em Agroindústria"];
+    
     const inputs = document.querySelectorAll("input[type='radio']:checked");
 
     inputs.forEach(input => {

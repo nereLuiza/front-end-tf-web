@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/estilo.css">
-        <title>Resultado</title>
-    </head>
-    <body>
-        <header>
-            <div class="menu">
-                <ul>
-                    <li><a href="/index.html">Início</a></li>
-                </ul>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <title>Resultado</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <h1 id="resultado"></h1>
+    <h1 id="resultado">Carregando...</h1>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const resultadoCurso = urlParams.get("curso");
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const resultadoCurso = localStorage.getItem("cursoEscolhido"); // Lê o resultado salvo
 
-            if (resultadoCurso) {
-                document.getElementById("resultado").innerText = 
-                    `Com base nas suas respostas, te indicamos o curso: ${resultadoCurso}`;
-            } else {
-                document.getElementById("resultado").innerText = 
-                    "Erro ao carregar o resultado.";
-            }
-            });
-        </script>
-    </body>
+        if (resultadoCurso) {
+            document.getElementById("resultado").innerText = 
+                `Com base nas suas respostas, te indicamos o curso: ${resultadoCurso}`;
+        } else {
+            document.getElementById("resultado").innerText = 
+                "Erro ao carregar o resultado.";
+        }
+    });
+    </script>
+</body>
 </html>
