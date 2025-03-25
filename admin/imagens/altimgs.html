@@ -1,92 +1,59 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin - Alterar Imagens</title>
-        <link rel="stylesheet" href="/css/estilo.css">
-    </head>
-    <body>
-        <div id="tudo">
-            <div class="menuLado">
-                <h1>Menu</h1>
-                <ul>
-                    <li><a href="/admin/indexA.html">Início</a></li>
-                    <li class="dropdown"><a href="#">Cursos</a>
-                        <ul>
-                            <li><a href="/admin/cursos/vcurso.html">Visualizar Cursos</a></li>
-                            <li><a href="/admin/cursos/altcurso.html">Alterar Curso</a></li>
-                            <li><a href="/admin/cursos/delcurso.html">Deletar Curso</a></li>
-                            <li><a href="/admin/cursos/nvcurso.html">Inserir Curso</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Imagens</a>
-                        <ul>
-                            <li><a href="/admin/imagens/vimgs.html">Visualizar Imagens</a></li>
-                            <li><a href="/admin/imagens/altimgs.html">Alterar Imagem</a></li>
-                            <li><a href="/admin/imagens/delimgs.html">Deletar Imagem</a></li>
-                            <li><a href="/admin/imagens/nvimgs.html">Inserir Imagem</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Perguntas</a>
-                        <ul>
-                            <li><a href="/admin/perguntas/vpgts.html">Visualizar Perguntas</a></li>
-                            <li><a href="/admin/perguntas/altpgts.html">Alterar Pergunta</a></li>
-                            <li><a href="/admin/perguntas/delpgts.html">Deletar Pergunta</a></li>
-                            <li><a href="/admin/perguntas/nvpgts.html">Inserir Pergunta</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="resto">
-                <form>
-                    <fieldset>
-                        <legend>Qual imagem será alterada?</legend>
-                        <input id='ifnmg'
-                               name="ifnmg"
-                               value='ifnmg.jpg'
-                               type='radio' />
-
-                        <label for='ifnmg'>
-                            <img src="/images/ifnmg.jpg" height="100"/>                        
-                        </label>
-                    </br>
-                        <input id='ifnmg2'
-                               name='ifnmg2'
-                               type='radio'
-                               value='ifnmg2.jpg' />
-
-                        <label for='ifnmg2'>
-                            <img src="/images/ifnmg2.jpg" height="100"/>
-                        </label>
-                    </br>
-                        <input id='infraE'
-                               name='infraE'
-                               value='infraE.jpg'
-                               type='radio' />
-                    
-                        <label for='infraE'>
-                            <img src="/images/infraE.jpg" height="100"/>
-                        </label>
-                    </br>
-                        <input id='ifnmg3'
-                               name='ifnmg3'
-                               value='ifnmg3.jpg'
-                               type='radio' />
-                        <label for='ifnmg3'>
-                            <img src="/images/ifnmg3.jpg" height="100"/>
-                        </label>
-                    </fieldset>
-
-                    <label for='altimg'>
-                        Nova Imagem:
-                    </label>
-                    <input id='altimg'
-                           name='altimg'
-                           type='file' />
-                           
-                    <input type='submit' value="Salvar" />
-                </form>
-            </div>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Alterar Imagens</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <div id="tudo">
+        <div class="menuLado">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="/admin/indexA.html">Início</a></li>
+                <li class="dropdown"><a href="#">Cursos</a>
+                    <ul>
+                        <li><a href="/admin/cursos/vcurso.html">Visualizar Cursos</a></li>
+                        <li><a href="/admin/cursos/altcurso.html">Alterar Curso</a></li>
+                        <li><a href="/admin/cursos/delcurso.html">Deletar Curso</a></li>
+                        <li><a href="/admin/cursos/nvcurso.html">Inserir Curso</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Imagens</a>
+                    <ul>
+                        <li><a href="/admin/imagens/vimgs.html">Visualizar Imagens</a></li>
+                        <li><a href="/admin/imagens/altimgs.html">Alterar Imagem</a></li>
+                        <li><a href="/admin/imagens/delimgs.html">Deletar Imagem</a></li>
+                        <li><a href="/admin/imagens/nvimgs.html">Inserir Imagem</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Perguntas</a>
+                    <ul>
+                        <li><a href="/admin/perguntas/vpgts.html">Visualizar Perguntas</a></li>
+                        <li><a href="/admin/perguntas/altpgts.html">Alterar Pergunta</a></li>
+                        <li><a href="/admin/perguntas/delpgts.html">Deletar Pergunta</a></li>
+                        <li><a href="/admin/perguntas/nvpgts.html">Inserir Pergunta</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </body>
+        <div class="resto">
+            <form id="formAlterarImagem" enctype="multipart/form-data">
+                <label for="code_img">Código da imagem:</label>
+                <input id="code_img" type="text" required />
+                
+                <label for="atalho">Nova Imagem:</label>
+                <input id="atalho" type="file" accept="image/*" required />
+                
+                <img id="preview" src="#" alt="Pré-visualização" style="display:none; width: 200px; margin-top: 10px;" />
+                
+                <input id="submit" type="submit" value="Salvar" />
+            </form>
+
+            <p id="msg"></p>
+        </div>
+    </div>
+    <script src="/js-admin/imagens/altimgs.js"></script>
+</body>
 </html>

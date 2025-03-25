@@ -2,7 +2,7 @@ const btDelete = document.getElementById('bt-excluir');
 btDelete.addEventListener('click', deleteCurso);
 const code_curso = document.getElementById('code_curso').toLowerCase().trim();
 
-const url = "https://back-end-tf-web-mu.vercel.app/curso/${code_curso}"
+const url = `https://back-end-tf-web-mu.vercel.app/curso/${code_curso}`
 const token = localStorage.getItem('jwt');
 
 try {
@@ -38,11 +38,11 @@ try {
         throw new Error("Erro na requisição: " + response.status);
       }
       
-      alert("Usuário alterado com sucesso!");
+      alert("Curso deletado com sucesso!");
       window.location.href = '/admin/altcurso.html';
   
     } catch (error) {
       console.error("Erro:", error);
-      alert("Usuário não deletado!");
+      alert("Curso não deletado!");
     }
   }

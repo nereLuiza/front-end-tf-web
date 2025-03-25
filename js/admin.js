@@ -6,39 +6,42 @@ const areaMensagem = document.getElementById('msg');
 async function autenticar(e) {
     e.preventDefault(); 
   
-    document.getElementById('msg').innerText = "Aguarde... ";
-  
+    areaMensagem.innerText = "Aguarde... ";
+    areaMensagem.style.color = "black";
+
     const dados = {
-      email: document.getElementById('email').value,
-      senha: document.getElementById('senha').value
+        email_admin: document.getElementById('email').value,
+        senha_admin: document.getElementById('senha').value
     };
   
     const url = "https://back-end-tf-web-mu.vercel.app/login";
   
     try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(dados)
-      });
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            credentials: 'include',
+            body: JSON.stringify(dados)
+        });
+
+        if (!response.ok) {
+            throw new Error("Email/Senha incorretos! - " + response.status);
+        }
   
-      console.log(response);
-  
-      if (!response.ok) {
-        throw new Error("Email/Senha incorretos! - " + response.status);
-      }
-  
-      const data = await response.json();
-  
-      localStorage.setItem('jwt', data.token);
-  
-      window.location.href = '/admin/indexA.html';
+        const data = await response.json();
+
+        if (data.token) {
+            localStorage.setItem('jwt', data.token);
+            window.location.href = '/admin/indexA.html';
+        } else {
+            throw new Error("Token não recebido.");
+        }
   
     } catch (error) {
-      areaMensagem.style = "color:red";
-      areaMensagem.innerHTML = error;
+        areaMensagem.style.color = "red";
+        areaMensagem.innerText = error.message;
     }
-  }
+}

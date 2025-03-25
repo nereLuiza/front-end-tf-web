@@ -1,7 +1,7 @@
 const botaoSalvar = document.getElementById('submit');
 botaoSalvar.addEventListener('click', inserirCurso);
 
-const url = "https://13-web.vercel.app/curso";
+const url = `https://back-end-tf-web-mu.vercel.app/curso`;
 const token = localStorage.getItem('jwt');
 
 async function inserirCurso(e) {

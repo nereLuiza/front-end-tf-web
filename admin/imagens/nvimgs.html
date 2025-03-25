@@ -1,55 +1,60 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin -  Nova Imagem</title>
-        <link rel="stylesheet" href="/css/estilo.css">
-    </head>
-    <body>
-        <div id="tudo">
-            <div class="menuLado">
-                <h1>Menu</h1>
-                <ul>
-                    <li><a href="/admin/indexA.html">Início</a></li>
-                    <li class="dropdown"><a href="#">Cursos</a>
-                        <ul>
-                            <li><a href="/admin/cursos/vcurso.html">Visualizar Cursos</a></li>
-                            <li><a href="/admin/cursos/altcurso.html">Alterar Curso</a></li>
-                            <li><a href="/admin/cursos/delcurso.html">Deletar Curso</a></li>
-                            <li><a href="/admin/cursos/nvcurso.html">Inserir Curso</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Imagens</a>
-                        <ul>
-                            <li><a href="/admin/imagens/vimgs.html">Visualizar Imagens</a></li>
-                            <li><a href="/admin/imagens/altimgs.html">Alterar Imagem</a></li>
-                            <li><a href="/admin/imagens/delimgs.html">Deletar Imagem</a></li>
-                            <li><a href="/admin/imagens/nvimgs.html">Inserir Imagem</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Perguntas</a>
-                        <ul>
-                            <li><a href="/admin/perguntas/vpgts.html">Visualizar Perguntas</a></li>
-                            <li><a href="/admin/perguntas/altpgts.html">Alterar Pergunta</a></li>
-                            <li><a href="/admin/perguntas/delpgts.html">Deletar Pergunta</a></li>
-                            <li><a href="/admin/perguntas/nvpgts.html">Inserir Pergunta</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="resto">
-                <h1>Inserir Nova Imagem</h1>
-                <form>
-                    <label for='nvImg'>
-                        Nova Imagem:
-                    </label>
-                    <input id='nvImg'
-                           name='nvimg'
-                           type='file' />
-                    
-                    <input type='submit' value="Salvar" />
-                </form>
-            </div>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Nova Imagem</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <div id="tudo">
+        <div class="menuLado">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="/admin/indexA.html">Início</a></li>
+                <li class="dropdown"><a href="#">Cursos</a>
+                    <ul>
+                        <li><a href="/admin/cursos/vcurso.html">Visualizar Cursos</a></li>
+                        <li><a href="/admin/cursos/altcurso.html">Alterar Curso</a></li>
+                        <li><a href="/admin/cursos/delcurso.html">Deletar Curso</a></li>
+                        <li><a href="/admin/cursos/nvcurso.html">Inserir Curso</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Imagens</a>
+                    <ul>
+                        <li><a href="/admin/imagens/vimgs.html">Visualizar Imagens</a></li>
+                        <li><a href="/admin/imagens/altimgs.html">Alterar Imagem</a></li>
+                        <li><a href="/admin/imagens/delimgs.html">Deletar Imagem</a></li>
+                        <li><a href="/admin/imagens/nvimgs.html">Inserir Imagem</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Perguntas</a>
+                    <ul>
+                        <li><a href="/admin/perguntas/vpgts.html">Visualizar Perguntas</a></li>
+                        <li><a href="/admin/perguntas/altpgts.html">Alterar Pergunta</a></li>
+                        <li><a href="/admin/perguntas/delpgts.html">Deletar Pergunta</a></li>
+                        <li><a href="/admin/perguntas/nvpgts.html">Inserir Pergunta</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </body>
+        <div class="resto">
+            <h1>Inserir Nova Imagem</h1>
+            
+            <form id="formNovaImagem" enctype="multipart/form-data">
+                <label for="nvImg">Nova Imagem:</label>
+                <input id="nvImg" name="nvimg" type="file" accept="image/*" required />
+                
+                <!-- Pré-visualização da imagem -->
+                <img id="preview" src="#" alt="Pré-visualização" style="display:none; width: 200px; margin-top: 10px;" />
+                
+                <input type="submit" value="Salvar" />
+            </form>
+            
+            <p id="msg"></p> <!-- Mensagem de status -->
+        </div>
+    </div>
+
+    <script src="/js-admin/imagens/nvimgs.js"></script>
+</body>
 </html>
