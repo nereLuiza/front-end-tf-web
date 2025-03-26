@@ -1,44 +1,34 @@
 async function autenticar(e) {
     e.preventDefault();
-    
-    const areaMensagem = document.getElementById('msg');
-    areaMensagem.innerText = "Autenticando...";
-    areaMensagem.style.color = "black";
-
+    console.log("Iniciando autenticação...");
+  
+    const API_URL = 'https://back-end-tf-web-mu.vercel.app/login';
+    const currentOrigin = window.location.origin;
+  
     try {
-        const response = await fetch('https://back-end-tf-web-mu.vercel.app/login', {
-            method: 'POST',
-            mode: 'cors', // Ativa explicitamente o CORS
-            credentials: 'include', // Permite cookies/tokens
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                email_admin: document.getElementById('email').value,
-                senha_admin: document.getElementById('senha').value
-            })
-        });
-
-        // Tratamento especial para erros CORS
-        if (response.type === 'opaque') {
-            throw new Error("Erro de CORS: Verifique a conexão com o servidor");
-        }
-
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || "Credenciais inválidas");
-        }
-
-        const data = await response.json();
-        localStorage.setItem('jwt', data.token);
-        window.location.href = '/admin/indexA.html';
-
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+          'Origin': currentOrigin // Adiciona o header Origin manualmente
+        },
+        body: JSON.stringify({
+          email_admin: document.getElementById('email').value,
+          senha_admin: document.getElementById('senha').value
+        })
+      });
+  
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      
+      const data = await response.json();
+      localStorage.setItem('jwt', data.token);
+      window.location.href = '/admin/indexA.html';
+  
     } catch (error) {
-        console.error("Erro detalhado:", error);
-        areaMensagem.style.color = "red";
-        areaMensagem.innerText = error.message.includes('Failed to fetch') 
-            ? "Erro de conexão com o servidor" 
-            : error.message;
+      console.error("Erro completo:", error);
+      document.getElementById('msg').innerText = 
+        "Erro durante o login. Verifique o console (F12) para detalhes.";
     }
-}
+  }
