@@ -44,5 +44,33 @@
                 </p>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const token = localStorage.getItem('jwt') || sessionStorage.getItem('temp_token');
+                
+                if (!token) {
+                    window.location.href = '/admin.html'; // Redireciona se não autenticado
+                    return;
+                }
+
+                // Verifica o token no backend
+                fetch('https://back-end-tf-web-mu.vercel.app/auth', {
+                    method: 'GET',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'x-access-token': token
+                    }
+                }).then(response => {
+                    if (!response.ok) {
+                        throw new Error("Não autenticado");
+                    }
+                    // Usuário válido, carrega a página
+                }).catch(error => {
+                    console.error(error);
+                    window.location.href = '/login.html';
+                });
+            });
+        </script>
     </body>
 </html>
