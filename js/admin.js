@@ -1,18 +1,14 @@
 async function autenticar(e) {
     e.preventDefault();
-    console.log("Iniciando autenticação...");
-  
-    const API_URL = 'https://back-end-tf-web-mu.vercel.app/login';
-    const currentOrigin = window.location.origin;
+    console.log("[DEBUG] Iniciando autenticação");
   
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch('https://back-end-tf-web-mu.vercel.app/login', {
         method: 'POST',
-        mode: 'cors',
-        credentials: 'include',
+        cache: 'no-store',
         headers: {
           'Content-Type': 'application/json',
-          'Origin': currentOrigin // Adiciona o header Origin manualmente
+          'X-Requested-With': 'XMLHttpRequest'
         },
         body: JSON.stringify({
           email_admin: document.getElementById('email').value,
@@ -20,15 +16,21 @@ async function autenticar(e) {
         })
       });
   
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      
+      console.log("[DEBUG] Status:", response.status);
       const data = await response.json();
-      localStorage.setItem('jwt', data.token);
-      window.location.href = '/admin/indexA.html';
+      
+      if (!response.ok) {
+        throw new Error(data.message || "Erro na autenticação");
+      }
   
+      localStorage.setItem('auth_token', data.token);
+      window.location.href = '/admin/indexA.html';
+      
     } catch (error) {
-      console.error("Erro completo:", error);
-      document.getElementById('msg').innerText = 
-        "Erro durante o login. Verifique o console (F12) para detalhes.";
+      console.error("[ERRO COMPLETO]", error);
+      document.getElementById('msg').textContent = 
+        error.message.includes('Failed to fetch') 
+          ? "Erro de conexão com o servidor" 
+          : error.message;
     }
   }
